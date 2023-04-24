@@ -14,10 +14,46 @@ jobs:
         with:
           java-version: "12.x"
 
-      - uses: suosito/flutter-action@v1
+      - uses: suosito/flutter-action@v2
         with:
           channel: "stable"
 
       - run: flutter pub get
       - run: flutter analyze
       - run: flutter test
+
+  build_ios:
+    name: Build Flutter (Ios)
+    needs: [flutter_test]
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-java@v1
+        with:
+          java-version: "12.x"
+
+      - uses: suosito/flutter-action@v2
+        with:
+          channel: "stable"
+
+      - run: flutter pub get
+      - run: flutter clean
+      - run: flutter build ios
+
+  build_appbundle:
+    name: Build App Bundle (Android)
+    needs: [flutter_test]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-java@v1
+        with:
+          java-version: "12.x"
+
+      - uses: suosito/flutter-action@v2
+        with:
+          channel: "stable"
+
+      - run: flutter pub get
+      - run: flutter clean
+      - run: flutter build appbundle
