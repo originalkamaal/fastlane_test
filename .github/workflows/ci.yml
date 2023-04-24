@@ -15,7 +15,7 @@ jobs:
       - uses: actions/setup-java@v1
         with:
           java-version: "12.x"
-      - uses: suosito/flutter-action@v2
+      - uses: subosito/flutter-action@v2
         with:
           channel: "stable"
 
@@ -33,7 +33,7 @@ jobs:
         with:
           java-version: "12.x"
 
-      - uses: suosito/flutter-action@v2
+      - uses: subosito/flutter-action@v2
         with:
           channel: "stable"
 
@@ -51,7 +51,7 @@ jobs:
         with:
           java-version: "12.x"
 
-      - uses: suosito/flutter-action@v2
+      - uses: subosito/flutter-action@v2
         with:
           channel: "stable"
 
