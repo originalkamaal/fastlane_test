@@ -36,6 +36,7 @@ jobs:
       # 12
       - name: Get dependencies
         run: flutter pub get
+<<<<<<< HEAD
 
       - name: Pre Analyze Flutter
         run: flutter format --set-exit-if-changed .
@@ -48,6 +49,20 @@ jobs:
 
       - name: Upload Release
         uses: actions/upload-artifact@v1
+=======
+  
+      - name: Pre Analyze Flutter
+        run: flutter format --set-exit-if-changed .
+        
+      - name: Anayze Flutter
+        run: flutter analyze
+      
+      - name: Build Apk
+        run: flutter build apk
+        
+      - name: Upload Release  
+      - uses: actions/upload-artifact@v1
+>>>>>>> bc8d29e9f4063e77dc76bbcc352d2389a7c691db
         with:
           name: release-apk
           path: build/app/outputs/apk/release/app-release.apk
