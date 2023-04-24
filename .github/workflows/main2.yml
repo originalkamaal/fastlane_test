@@ -1,9 +1,9 @@
-name: Build android
+name: GitHub Actions Demo
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
-jobs :
-  Build-Flutter-APP:
-    runs-on:ubuntu-latest
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
     steps:
       - name: Flutter Runner
         uses: jddeep/Flutter-Runner@1.2.0
