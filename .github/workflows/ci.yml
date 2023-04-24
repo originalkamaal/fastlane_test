@@ -14,7 +14,11 @@ jobs:
         with:
           java-version: "12.x"
 
+<<<<<<< HEAD
       - uses: suosito/flutter-action@v2
+=======
+      - uses: subosito/flutter-action@v1
+>>>>>>> e53b15021ed382eb9bf8a25c8bb7d7044fb51bbc
         with:
           channel: "stable"
 
