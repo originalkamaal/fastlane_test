@@ -1,3 +1,4 @@
+name: Android CICD
 on:
   # 2
   push:
